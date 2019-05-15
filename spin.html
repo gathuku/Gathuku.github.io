@@ -1,0 +1,69 @@
+---
+layout: default
+---
+   <style>
+            body {
+         margin: 0;
+         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+        
+        }
+
+        canvas {
+        display: block;
+        margin: 0 auto;
+        }
+        corner{
+        position: absolute;
+        top: 5px;
+        right: 10px;
+        }
+        .button{
+            
+            background-color: #4CAF50; /* Green */
+            border: none;
+            border-radius: 12px;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;  
+
+        }
+        .button-set{
+            
+            background-color: #4CAF50; /* Green */
+            border: none;
+            border-radius: 12px;
+            color: white;
+            padding: 8px 16px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            
+        }
+        .input{
+           
+            border-radius: 12px;
+            padding: 8px 14px;
+            text-align: center;
+            display: inline;
+            text-decoration: none;
+        }
+
+   </style>
+    <div class="container">
+            <b><font color="#000">Current Speed : <span class="corner" id="svalue"></span></font></b><br>
+            &nbsp;<input class="input" type="text" maxlength="3" style="width: 30px" name="value" id='value' />
+            <input class="button-set" type="button" value="set speed" onclick="verifyorder()" /><br>
+             <br>
+              &nbsp;<input class="button" type="button" value="Spin It For Me!" onclick="spin()" /><br>
+             
+              <canvas id="canvas" width="500" height="500"></canvas>
+    </div>
+
+
+ <script src="/assets/js/index.js"></script>
+
+
