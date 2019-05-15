@@ -20,6 +20,6 @@ after_success:
 deploy:
     provider: pages
     skip_cleanup: true
-    github_token: 31aad84e551c16f7f83cf94ed5f28f6625173219
+    github_token: $GITHUB_TOKEN
     on:
         branch: master
