@@ -17,5 +17,5 @@ Catherine Hettinger, a chemical engineer by training, was initially credited by 
 With the rapid increase in the popularity of fidget spinners in 2017, many children and teenagers began using them in school, and some schools also reported that students were trading and selling the spinner toys.
 
 ### See the video for more
-![](https://www.youtube.com/watch?v=Ge_22K0UTIY)
+![/assets/image/video-image.jpg](https://www.youtube.com/watch?v=Ge_22K0UTIY)
 
