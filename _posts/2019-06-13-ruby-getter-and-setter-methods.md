@@ -47,7 +47,7 @@ obj1.name = 'Commandos'
 p obj1.name #=> "Commandos"
 ```
 
-### What are accessors 
+### What are accessors?
 Accessors are a way to create getter and setter methods without explicitly defining them in a class.
 There are three types fo accessors in Ruby.
 - `attr_reader` automatically generates a getter method for each given attribute.
@@ -64,9 +64,9 @@ class Movie
     @year = year
   end
 end
-obj1 = Movie.new('Dare Devil', 1994)
+obj1 = Movie.new('Dare Devil', 2019)
 p obj1.name #=> Dare Devil
-p obj1.year #=> 1994
+p obj1.year #=> 2019
 ```
 As I mentioned above, attr_witer generates a setter method for each given attribute. Therefore you can assign new values to ob1 without explicitly writing setter methods for name and year
 
@@ -80,11 +80,11 @@ class Movie
     @year = year
   end
 end
-obj1 = Movie.new('Dare Devil, 1994)
+obj1 = Movie.new('Dare Devil, 2019)
 obj1.name = 'Fight Club'
-obj1.year = 1999
+obj1.year = 2020
 p obj1.name #=> "Fight Club"
-p obj1.year #=> 1999
+p obj1.year #=> 2020
 ```
 
 Lastlyt, attr_accessor does what attr_reader and attr_writer do with just one line of code! It will automatically generate a getter and setter mehod for each given attribute.
@@ -97,11 +97,11 @@ class Movie
     @year = year
   end
 end
-obj1 = Movie.new('Dare Devil', 1994)
+obj1 = Movie.new('Dare Devil', 2019)
 obj1.name = 'Fight Club'
-obj1.year = 1999
+obj1.year = 2020
 p obj1.name #=> "Fight Club"
-p obj1.year #=> 1999
+p obj1.year #=> 2020
 ```
 
 
