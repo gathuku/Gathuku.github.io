@@ -87,7 +87,7 @@ p obj1.name #=> "Fight Club"
 p obj1.year #=> 2020
 ```
 
-Lastlyt, attr_accessor does what attr_reader and attr_writer do with just one line of code! It will automatically generate a getter and setter mehod for each given attribute.
+Lastly, attr_accessor does what attr_reader and attr_writer do with just one line of code! It will automatically generate a getter and setter mehod for each given attribute.
 ```
 class Movie
   attr_accessor :name, :year
