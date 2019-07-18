@@ -22,6 +22,6 @@ deploy:
             - gh-pages
 deploy:
   provider: script
-  script: bash ./docker_push
+  script: echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin && docker push gathuku/zege_fidget:fidget
   on:
     branch: master
