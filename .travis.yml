@@ -1,16 +1,9 @@
 language: ruby
 services:
     -docker
-node_js:
-    - "8.10"
-rvm:
-    - 2.5.1
-install:
-    - gem install jekyll bundler
-before_script:
-    - bundle install
+
 script:
-    - bundle exec jekyll build
+    - docker run --rm -it --volume="$PWD:/srv/jekyll" jekyll/jekyll:3.8 /bin/bash -c "chmod a+wx . && jekyll build"
 branches:
     only:
         - gh-pages
