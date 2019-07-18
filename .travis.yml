@@ -20,8 +20,8 @@ deploy:
         branches:
           only:
             - gh-pages
-deploy:
-  provider: script
-  script: echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin && docker push gathuku/zege_fidget
-  on:
-    branch: master
+# deploy:
+#   provider: script
+#   script: echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin && docker push gathuku/zege_fidget
+#   on:
+#     branch: master
