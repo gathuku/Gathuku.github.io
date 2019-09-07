@@ -11,7 +11,7 @@ Github actions now supports CI/CD to automate how you build,test and deploy appl
 ## Build and test a rails app 
 Actions comes with suggested workflows which is appropriate for your project.
 
-![](/assests/image/actions_2.png)
+![](/assets/image/actions_2.png)
 
 Lets have a look at the suggested Ruby workflow.
 ```
