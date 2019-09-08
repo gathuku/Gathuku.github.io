@@ -78,7 +78,7 @@ To shallow clone your repository, or copy only the latest version of your reposi
     fetch-depth: 1
 ``` 
 
-After setting the checkout with a prefered versison of your project, you can now list the your steps with `name` and `run` command.This exaple install bundler,install dependancies form Gemfile and run test with rake.
+After setting the checkout with a prefered versison of your project, you can now list the your steps with `name` and `run` command.This exaple install bundler,install dependancies from Gemfile and run test with rake.
 ```
     - name: Install Bundler
       run: gem install bundler
@@ -89,14 +89,14 @@ After setting the checkout with a prefered versison of your project, you can now
       run: bundle exec rake
 ```
 
-Depending on the OS you might want to install some dependancies required by your gem. For example in Ubuntu i installed this library for `sqlite3`
+Depending on the OS you might want to install some dependancies required by your gems. For example in Ubuntu i installed this library for `sqlite3`
 ```
     - name: Install sqlite3-lib
       run: sudo apt-get install libsqlite3-dev
 ```
 
 ## Build across multiple platform 
-The following `Yaml` syntax will build and test our rails app on three platform `ubuntu`,`macOS`,`windows`.
+The following `Yaml` syntax will define jobs to build and test our rails app on three platform `ubuntu`,`macOS`,`windows`.
 
 ```
 name: Ruby
@@ -161,6 +161,7 @@ jobs:
 ```
 
 Lets have a look at the final output 
+
 ![](/assets/image/actions_3.png)
 
 See more on the [repo](https://github.com/gathuku/zege), you may not see the the actions if you are reading before November 2019 untill it become public available.
