@@ -11,7 +11,8 @@ branches:
         - master
 after_success:
     - echo "Build was successful"
-    -  - if[ $TRAVIS_EVENT_TYPE == pull_request && $TRAVIS_BRANCH == master]; then  bundle exec jekyll algolia ;fi
+    script:
+    - if[ $TRAVIS_EVENT_TYPE == pull_request && $TRAVIS_BRANCH == master]; then  bundle exec jekyll algolia ;fi
 
 deploy:
     provider: pages
