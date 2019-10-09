@@ -4,6 +4,8 @@ services:
 
 script:
     - docker run --rm -it --volume="$PWD:/srv/jekyll" jekyll/jekyll:3.8 /bin/bash -c "chmod a+wx . && jekyll build"
+    #- ALGOLIA_API_KEY=$ALGOLIA_API_KEY bundle exec jekyll algolia
+    #- if [[$TRAVIS_BRANCH == "master"]]; then ALGOLIA_API_KEY=$ALGOLIA_API_KEY bundle exec jekyll algolia; fi
 branches:
     only:
         - gh-pages
@@ -19,7 +21,10 @@ deploy:
     on:
         branches:
           only:
-            - gh-pages
+            - gh-pages 
+after_deploy:
+   - ALGOLIA_API_KEY=$ALGOLIA_API_KEY bundle exec jekyll algolia
+   
 # deploy:
 #   provider: script
 #   script: echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin && docker push gathuku/zege_fidget
