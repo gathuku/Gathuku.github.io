@@ -4,6 +4,7 @@ services:
 
 script:
     - docker run --rm -it --volume="$PWD:/srv/jekyll" jekyll/jekyll:3.8 /bin/bash -c "chmod a+wx . && jekyll build"
+    - ALGOLIA_API_KEY=$ALGOLIA_API_KEY bundle exec jekyll algolia
     - if [[${TRAVIS_BRANCH} == "master"]]; then ALGOLIA_API_KEY=${ALGOLIA_API_KEY} bundle exec jekyll algolia; fi
 branches:
     only:
