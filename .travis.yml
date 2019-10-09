@@ -14,6 +14,9 @@ branches:
 after_success:
     - echo "Build was successful"
 
+before_deploy:
+   - ALGOLIA_API_KEY=$ALGOLIA_API_KEY bundle exec jekyll algolia
+
 deploy:
     provider: pages
     skip_cleanup: true
