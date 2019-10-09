@@ -4,7 +4,7 @@ services:
 
 script:
     - docker run --rm -it --volume="$PWD:/srv/jekyll" jekyll/jekyll:3.8 /bin/bash -c "chmod a+wx . && jekyll build"
-    - if[[${TRAVIS_BRANCH} == "master"]]; then  bundle exec jekyll algolia; fi
+    - if [[${TRAVIS_BRANCH} == "master"]]; then  bundle exec jekyll algolia; fi
 branches:
     only:
         - gh-pages
